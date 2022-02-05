@@ -1,0 +1,163 @@
+<!--@ CARD CONTAINER -->
+<div class="card mt-2">
+  <!--@ CARD CONTAINER -->
+
+  <!--@ CARD BANNER TOP -->
+  <div class="banner">
+    <i (click)="editarImagen()" class="bi-pencil text-light top-0 end-0"></i>
+    <img src="{{ imagen }}" class="img-fluid" alt="" />
+  </div>
+  <!--@ CARD BANNER TOP -->
+
+  <!--@INPUT PARA EDITAR IMAGEN -->
+  <form *ngIf="mostrarImagen" class="input-group mb-3">
+    <input
+      [(ngModel)]="imagen"
+      type="text"
+      id="imagen"
+      name="imagen"
+      class="form-control"
+      placeholder="Imagen"
+      aria-label="Recipient's username"
+      aria-describedby="basic-addon2"
+    />
+    <span
+      (click)="editarImagen()"
+      type="submit"
+      class="input-group-text"
+      id="basic-addon2"
+      >Ok</span
+    >
+  </form>
+  <!--@INPUT PARA EDITAR IMAGEN -->
+
+  <!--@ AVATAR CONTAINER -->
+  <div class="container__avatar">
+    <i class="bi-pencil"></i>
+    <img
+      class="img-fluid avatar bg-primary"
+      src="../../../assets/images/avatar.png"
+      alt=""
+    />
+  </div>
+  <!--@ AVATAR CONTAINER -->
+
+  <!--@CARD BODY -->
+  <div class="card-body mt-4">
+    <div class="container-fluid">
+      <div class="row g-1">
+        <div class="col-sm-6">
+          <div class="">
+            <!--@DIV NOMBRE -->
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title">{{ nombre }}</h5>
+              <i (click)="editarNombre()" class="bi-pencil"></i>
+            </div>
+            <!--@DIV NOMBRE -->
+
+            <!--@INPUT PARA EDITAR NOMBRE -->
+            <form *ngIf="mostrarNombre" class="input-group mb-3">
+              <input
+                [(ngModel)]="nombre"
+                type="text"
+                id="nombre"
+                name="nombre"
+                class="form-control"
+                placeholder="Nombre"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+              />
+              <span
+                (click)="editarNombre()"
+                type="submit"
+                class="input-group-text"
+                id="basic-addon2"
+                >Ok</span
+              >
+            </form>
+            <!--@INPUT PARA EDITAR NOMBRE -->
+
+            <!--@DIV PUESTO -->
+            <div class="d-flex justify-content-between">
+              <h6 class="card-subtitle text-muted">{{ puesto }}</h6>
+              <i (click)="editarPuesto()" class="bi-pencil text-end"></i>
+            </div>
+            <!--@DIV PUESTO -->
+
+            <!--@INPUT PARA EDITAR PUESTO -->
+            <form *ngIf="mostrarPuesto" class="input-group mb-3">
+              <input
+                [(ngModel)]="puesto"
+                type="text"
+                id="puesto"
+                name="puesto"
+                class="form-control"
+                placeholder="Puesto"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+              />
+              <span
+                (click)="editarPuesto()"
+                type="submit"
+                class="input-group-text"
+                id="basic-addon2"
+                >Ok</span
+              >
+            </form>
+            <!--@INPUT PARA EDITAR PUESTO -->
+
+            <!--@DIV UBICACION -->
+            <div class="d-flex justify-content-between">
+              <h6 class="card-subtitle text-muted">{{ ubicacion }}</h6>
+              <i (click)="editarUbicacion()" class="bi-pencil text-end"></i>
+            </div>
+            <!--@DIV UBICACION -->
+
+            <!--@INPUT PARA EDITAR UBICACION -->
+            <form *ngIf="mostrarUbicacion" class="input-group mb-3">
+              <input
+                [(ngModel)]="ubicacion"
+                type="text"
+                id="ubicacion"
+                name="ubicacion"
+                class="form-control"
+                placeholder="ubicacion"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+              />
+              <span
+                (click)="editarUbicacion()"
+                type="submit"
+                class="input-group-text"
+                id="basic-addon2"
+                >Ok</span
+              >
+            </form>
+            <!--@INPUT PARA EDITAR UBICACION -->
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="border bg-light p-1">
+            <!--@DIV GITHUB -->
+            <div class="d-flex justify-content-between">
+              <h6 class="card-subtitle text-muted">Github</h6>
+              <i class="bi-pencil text-end"></i>
+            </div>
+            <!--@DIV GITHUB -->
+
+            <!--@DIV LINKEDIN -->
+            <div class="d-flex justify-content-between">
+              <h6 class="card-subtitle text-muted">Linkedin</h6>
+              <i class="bi-pencil text-end"></i>
+            </div>
+            <!--@DIV LINKEDIN -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--@CARD BODY -->
+
+  <!--@ CARD CONTAINER -->
+</div>
+<!--@ CARD CONTAINER -->
